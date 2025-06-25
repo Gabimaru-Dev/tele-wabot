@@ -12,7 +12,7 @@ const pino = require('pino');
 const axios = require('axios');
 
 // ======= Bot Configuration =======
-const TELEGRAM_BOT_TOKEN = '7859143842:AAFojL8qq6r8THs75Up9I6kSYmtnAM4V1rk:';
+const TELEGRAM_BOT_TOKEN = '7324430025:AAG1EQjCQpoKYYntRiGKzsVga0M1muQEMtQ';
 const CHANNEL_ID = '@gabimarutechchannel';
 const ADMIN_IDS = [8095961856]; // Replace with real Telegram user IDs
 
@@ -181,7 +181,7 @@ bot.onText(/^\/start$/, async (msg) => {
 /*  if (!(await checkChannelMembership(chatId)))
     return bot.sendMessage(chatId, `❌ Please join ${CHANNEL_ID} to use this bot.`); */
 
-  const photoUrl = 'https://your-server.com/banner.jpg';
+  const photoUrl = 'https://files.catbox.moe/8boi3c.jpg';
   const caption = `🤖 *Aizen WhatsApp Bot*\n\nConnect and manage WhatsApp from Telegram with powerful features.\n\n🔹 /connect <number>\n🔹 /deletepair <number> (admin)\n🔹 /listpair (admin)\n🔹 *ping* (from WhatsApp)`;
   bot.sendPhoto(chatId, photoUrl, { caption, parse_mode: 'Markdown' });
 });
