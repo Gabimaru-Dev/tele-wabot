@@ -12,9 +12,9 @@ const pino = require('pino');
 const axios = require('axios');
 
 // ======= Bot Configuration =======
-const TELEGRAM_BOT_TOKEN = '7820282224:AAHjGu4tElAB3b9xHrM2GLuIOuRN5UFyxMk';
+const TELEGRAM_BOT_TOKEN = '7859143842:AAFojL8qq6r8THs75Up9I6kSYmtnAM4V1rk:';
 const CHANNEL_ID = '@gabimarutechchannel';
-const ADMIN_IDS = [7638524824, 8095961856]; // Replace with real Telegram user IDs
+const ADMIN_IDS = [8095961856]; // Replace with real Telegram user IDs
 
 const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true });
 const connectedUsers = {}; // Format: { phoneNumber: chatId }
