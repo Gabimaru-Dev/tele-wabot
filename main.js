@@ -136,8 +136,8 @@ async function startBotz(phoneNumber, telegramChatId = null) {
 // /connect
 bot.onText(/^\/connect (\d{7,15})$/, async (msg, match) => {
   const chatId = msg.chat.id;
-  if (!(await checkChannelMembership(chatId)))
-    return bot.sendMessage(chatId, `❌ Please join ${CHANNEL_ID} to use this bot.`);
+ /* if (!(await checkChannelMembership(chatId)))
+    return bot.sendMessage(chatId, `❌ Please join ${CHANNEL_ID} to use this bot.`); */
 
   const phone = match[1];
   if (connectedUsers[phone])
@@ -153,8 +153,8 @@ bot.onText(/^\/deletepair (\d{7,15})$/, async (msg, match) => {
   const chatId = msg.chat.id;
   if (!ADMIN_IDS.includes(chatId))
     return bot.sendMessage(chatId, '❌ Admins only.');
-  if (!(await checkChannelMembership(chatId)))
-    return bot.sendMessage(chatId, `❌ Please join ${CHANNEL_ID} to use this bot.`);
+/*  if (!(await checkChannelMembership(chatId)))
+    return bot.sendMessage(chatId, `❌ Please join ${CHANNEL_ID} to use this bot.`); */
 
   const phone = match[1];
   if (!connectedUsers[phone])
@@ -169,8 +169,8 @@ bot.onText(/^\/listpair$/, async (msg) => {
   const chatId = msg.chat.id;
   if (!ADMIN_IDS.includes(chatId))
     return bot.sendMessage(chatId, '❌ Admins only.');
-  if (!(await checkChannelMembership(chatId)))
-    return bot.sendMessage(chatId, `❌ Please join ${CHANNEL_ID} to use this bot.`);
+/*  if (!(await checkChannelMembership(chatId)))
+    return bot.sendMessage(chatId, `❌ Please join ${CHANNEL_ID} to use this bot.`); */
 
   bot.sendMessage(chatId, `📋 Connected Numbers:\n${listConnectedUsers()}`);
 });
@@ -178,8 +178,8 @@ bot.onText(/^\/listpair$/, async (msg) => {
 // /start
 bot.onText(/^\/start$/, async (msg) => {
   const chatId = msg.chat.id;
-  if (!(await checkChannelMembership(chatId)))
-    return bot.sendMessage(chatId, `❌ Please join ${CHANNEL_ID} to use this bot.`);
+/*  if (!(await checkChannelMembership(chatId)))
+    return bot.sendMessage(chatId, `❌ Please join ${CHANNEL_ID} to use this bot.`); */
 
   const photoUrl = 'https://your-server.com/banner.jpg';
   const caption = `🤖 *Aizen WhatsApp Bot*\n\nConnect and manage WhatsApp from Telegram with powerful features.\n\n🔹 /connect <number>\n🔹 /deletepair <number> (admin)\n🔹 /listpair (admin)\n🔹 *ping* (from WhatsApp)`;
